@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Queue user</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link href="../../../resources/css/bootstrap.min.css" rel="stylesheet" media="screen" th:href="@{/resources/css/bootstrap.min.css}"/>
+    <link href="../../../resources/css/core.css" rel="stylesheet" media="screen" th:href="@{/resources/css/core.css}" />
+</head>
+<body>
+<div th:replace="fragments/header :: header">&nbsp;</div>
+<form class="form-narrow form-horizontal" action="#" method="post" th:action="@{/queue}" th:object="${queueForm}">
+
+    <fieldset>
+        <legend>Queue information</legend>
+
+        <!--<div class="form-group">-->
+            <!--<label for="queueName" class="col-lg-2 control-label">Queue Name</label>-->
+            <!--<div class="col-lg-10">-->
+                <!--<input type="text" class="form-control" id="queueName" placeholder="QueueName" name="inputqueuename" th:field="*{queueName}"/>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <div class="form-group">
+            <label for="inputMessage" class="col-lg-2 control-label">Message</label>
+            <div class="col-lg-10">
+                <input type="text" class="form-control" id="inputMessage" placeholder="message" name="inputmessage" th:field="*{message}"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-lg-offset-2 col-lg-10">
+                <button type="submit" class="btn btn-default">Add to queue</button>
+            </div>
+        </div>
+
+    </fieldset>
+
+</form>
+</body>
+</html>
